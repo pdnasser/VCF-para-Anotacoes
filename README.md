@@ -1,17 +1,14 @@
 # VCF-para-anotações
 
-## Primeiramente importar o VCF 
-```
-from google.colab import drive
-drive.mount('/content/drive')
-```
-## Instalar o VEP
+## Primeiramente fazer o download do VCF(WP312.filtered.vcf.tsv)
+
+## Instalar o VEP:
 
 ###### 1.instalar as dependências
 ###### 2.download da release ensembl-ref 105. no github
 ###### 3.descompactar o arquivo .tar.gz
-###### 4.entrar dentro do diretório
-###### 5.rodar os scripts
+###### 4.entrar noo diretório
+###### 5.rodar o script
 
 ```
 %%bash
@@ -21,7 +18,7 @@ tar -zxvf 105.0.tar.gz
 cd ensembl-vep-105.0
 ./INSTALL.pl --NO_UPDATE
 ```
-
+###### Nota: "NO_UPDATE" - para que o script seja processado sem pausas ou aceitações do usuário.
 ```
 %%bash
 cd ensembl-vep-105.0
@@ -40,8 +37,13 @@ cd ensembl-vep-105.0
   --fields "Uploaded_variation,Location,Allele,Existing_variation,HGVSc,HGVSp,SYMBOL,Consequence,IND,ZYG,Amino_acids,CLIN_SIG,PolyPhen,SIFT,VARIANT_CLASS,FREQS" \
   --individual all
 ```
+
+
+
 ```
 !pip install pandas
+```
+
 ```
 import pandas as pd
 import csv

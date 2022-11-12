@@ -1,6 +1,6 @@
 # VCF-para-anotações
 
-## Primeiramente fazer o download do VCF(WP312.filtered.vcf.tsv)
+## Primeiramente fazer o download do VCF(WP312.filtered.vcf.tsv) na minha lista de downloads.
 
 ## Instalar o VEP:
 

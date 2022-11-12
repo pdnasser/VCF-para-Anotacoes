@@ -4,7 +4,7 @@
 
 ## ou
 
-## Para baixar e utilizar no terminal do Google colaboratory
+## Para baixar e utilizar no terminal do Google colaboratory através do Google drive:
 
 ```
 from google.colab import drive
@@ -37,7 +37,7 @@ cd ensembl-vep-105.0
 cd ensembl-vep-105.0
 ./vep
 ```
-## Tabular, filtrar e ajustar os campos e scores das anotações das variantes
+## Tabular, filtrar e ajustar os campos e scores das anotações das variantes:
 
 ```bash
 %%bash
@@ -52,6 +52,21 @@ cd ensembl-vep-105.0
   --fields "Uploaded_variation,Location,Allele,Existing_variation,HGVSc,HGVSp,SYMBOL,Consequence,IND,ZYG,Amino_acids,CLIN_SIG,PolyPhen,SIFT,VARIANT_CLASS,FREQS" \
   --individual all
 ```
+## Tabular, filtrar e ajustar os campos e scores das anotações das variantes pelo google drive:
+
+```bash
+%%bash
+./ensembl-vep-105.0/vep  \
+  --fork 3 \
+	-i /content/drive/Shareddrives/T4-2022/homo_sapiens_refseq/105_GRCh37/WP312.filtered.vcf.gz \
+	-o WP312.filtered.vcf.tsv \
+  --dir_cache /content/drive/Shareddrives/T4-2022 \
+  --fasta /content/drive/Shareddrives/T4-2022/homo_sapiens_refseq/Homo_sapiens_assembly19.fasta \
+  --cache --offline --assembly GRCh37 --refseq  \
+	--pick --pick_allele --force_overwrite --tab --symbol --check_existing --variant_class --everything --filter_common \
+  --fields "Uploaded_variation,Location,Allele,Existing_variation,HGVSc,HGVSp,SYMBOL,Consequence,IND,ZYG,Amino_acids,CLIN_SIG,PolyPhen,SIFT,VARIANT_CLASS,FREQS" \
+  --individual all
+
 
 ## Instalar o pandas
 

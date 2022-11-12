@@ -10,7 +10,7 @@
 ###### 4.entrar no diretório
 
 
-```
+```bash
 %%bash
 sudo apt install unzip curl git libmodule-build-perl libdbi-perl libdbd-mysql-perl build-essential zlib1g-dev
 wget -c https://github.com/Ensembl/ensembl-vep/archive/refs/tags/105.0.tar.gz
@@ -21,14 +21,14 @@ cd ensembl-vep-105.0
 ###### Nota: "NO_UPDATE" - para que o script seja processado sem pausas ou aceitações do usuário.
 
 ## Rodar o script
-```
+```bash
 %%bash
 cd ensembl-vep-105.0
 ./vep
 ```
 ## Tabular, filtrar e ajustar os campos e scores das anotações das variantes
 
-```
+```bash
 %%bash
 ./ensembl-vep-105.0/vep  \
   --fork 3 \
@@ -44,7 +44,7 @@ cd ensembl-vep-105.0
 
 ## Instalar o pandas
 
-```
+```bash
 !pip install pandas
 ```
 

@@ -8,7 +8,7 @@
 ###### 2.download da release ensembl-ref 105. no github
 ###### 3.descompactar o arquivo .tar.gz
 ###### 4.entrar noo diretório
-###### 5.rodar o script
+
 
 ```
 %%bash
@@ -19,16 +19,20 @@ cd ensembl-vep-105.0
 ./INSTALL.pl --NO_UPDATE
 ```
 ###### Nota: "NO_UPDATE" - para que o script seja processado sem pausas ou aceitações do usuário.
+
+## Rodar o script
 ```
 %%bash
 cd ensembl-vep-105.0
 ./vep
 ```
+## Tabular, filtrar e ajustar os campos e scores das anotações das variantes
+
 ```
 %%bash
 ./ensembl-vep-105.0/vep  \
   --fork 3 \
-	-i /content/drive/Shareddrives/T4-2022/homo_sapiens_refseq/105_GRCh37/WP312.filtered.vcf.gz \
+	-i WP312.filtered.vcf.gz \
 	-o WP312.filtered.vcf.tsv \
   --dir_cache /content/drive/Shareddrives/T4-2022 \
   --fasta /content/drive/Shareddrives/T4-2022/homo_sapiens_refseq/Homo_sapiens_assembly19.fasta \
@@ -38,11 +42,13 @@ cd ensembl-vep-105.0
   --individual all
 ```
 
-
+## Instalar o pandas
 
 ```
 !pip install pandas
 ```
+
+## Trasnformar a tabela de VCF filtrada em dataframe pelo python
 
 ```
 import pandas as pd

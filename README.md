@@ -48,7 +48,7 @@ cd ensembl-vep-105.0
 !pip install pandas
 ```
 
-## Trasnformar a tabela de VCF filtrada em dataframe pelo python
+## Transformar a tabela de VCF filtrada em dataframe pelo python
 
 ```
 import pandas as pd

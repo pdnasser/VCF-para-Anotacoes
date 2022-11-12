@@ -7,7 +7,7 @@
 ###### 1.instalar as dependências
 ###### 2.download da release ensembl-ref 105. no github
 ###### 3.descompactar o arquivo .tar.gz
-###### 4.entrar noo diretório
+###### 4.entrar no diretório
 
 
 ```

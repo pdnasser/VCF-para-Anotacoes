@@ -2,7 +2,18 @@
 
 ## Primeiramente fazer o download do VCF(WP312.filtered.vcf.tsv) na minha lista de downloads.
 
-## Instalar o VEP:
+## ou
+
+## Para baixar e utilizar no terminal do Google colaboratory
+
+```
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+
+
+## Instalar o VEP (Ensembl Variant Effect Predictor):
 
 ###### 1.instalar as dependências
 ###### 2.download da release ensembl-ref 105. no github
